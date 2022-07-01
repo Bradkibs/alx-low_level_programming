@@ -29,7 +29,7 @@ int main(void)
 	{	printf("Last digit of %i is %i and is greater than 5\n", n, lst_digit);
 	}
 	else
-	{	char txt[] = "Last digit of %i is %i and is less than 6 and not 0\n"
+	{	char txt[] = "Last digit of %i is %i and is less than 6 and not 0\n";
 		printf(txt, n, lst_digit);
 	}
 	}
