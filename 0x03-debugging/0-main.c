@@ -8,10 +8,10 @@
  */
 int main(void)
 {
-	int integer;
+	int i;
 
-	integer = 0;
+	i = 0;
 
-	positive_or_negative(integer);
+	positive_or_negative(i);
 	return (0);
 }
