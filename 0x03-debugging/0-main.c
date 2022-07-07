@@ -13,6 +13,5 @@ int main(void)
 	integer = 0;
 
 	positive_or_negative(integer);
-
 	return (0);
 }
