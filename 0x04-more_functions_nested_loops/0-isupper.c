@@ -4,7 +4,6 @@
  * _isupper - checks for uppercase character
  * @c: integer
  * Return: 1 when if uppercase or 0 when lowercase
- * 
  *
  */
 
