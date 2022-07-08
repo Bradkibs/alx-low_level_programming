@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print_line - draws a straight line in the terminal according to the argument number passed
+ * print_line - draws a straight line in the terminal
+ * according to the argument number passed
  *
  * @n: integer
  *
