@@ -17,7 +17,7 @@ void rev_string(char *s)
 	{
 		l++;
 	}
-	while ( i < l/2)
+	while (i < l / 2)
 	{
 		temp = *(s + l - i - 1);
 		*(s + l - i - 1) = *(s + i);
