@@ -23,6 +23,12 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	while (n > k)
 	{
+		if (*(src + k) == '\0')
+		{
+			*(dest + j + k) = *(src + k);
+			break;
+		}
+		else
 		*(dest + j + k) = *(src + k);
 		k++;
 	}
