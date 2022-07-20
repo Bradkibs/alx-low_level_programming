@@ -2,7 +2,7 @@
 
 /**
  * factorial - returns the factorial of the given number
- * n: the number to be evaluated its factorial
+ * @n: the number to be evaluated its factorial
  * Return: an integer which is the answer of the factorial to n
  * Example:
  * factorial(5); --> 5 * 4 * 3 * 2 * 1 = 120
