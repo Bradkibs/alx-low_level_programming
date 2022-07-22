@@ -1,4 +1,8 @@
 #include "main.h"
+/**
+ * main - prints a string
+ * Return: nothing
+ */
 
 int main(void)
 {
