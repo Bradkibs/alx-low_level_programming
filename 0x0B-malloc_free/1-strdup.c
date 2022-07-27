@@ -10,9 +10,12 @@ char *_strdup(char *str)
 {
 	char *dup;
 
-	int i;
+	int i, j = 0;
 
-	dup = malloc(sizeof(str) * 1);
+	while (*(str + j))
+		j++;
+	j++;
+	dup = malloc(sizeof(char) * j);
 	if (dup == NULL || str == NULL)
 	{
 		free(dup);
