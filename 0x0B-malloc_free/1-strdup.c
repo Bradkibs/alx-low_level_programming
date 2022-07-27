@@ -21,8 +21,10 @@ char *_strdup(char *str)
 		free(dup);
 		return (NULL);
 	}
-	if (str == NULL)
+	else if (str == NULL)
+	{
 		return (NULL);
+	}
 	for (i = 0; *(str + i) != '\0'; i++)
 	{
 		*(dup + i) = *(str + i);
