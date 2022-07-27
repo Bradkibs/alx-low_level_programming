@@ -12,6 +12,11 @@ char *_strdup(char *str)
 
 	int i, j = 0;
 
+	if (!str)
+        {
+                return (NULL);
+        }
+
 	while (*(str + j) != '\0')
 		j++;
 	j++;
@@ -19,10 +24,6 @@ char *_strdup(char *str)
 	if (dup == NULL)
 	{
 		free(dup);
-		return (NULL);
-	}
-	else if (!str)
-	{
 		return (NULL);
 	}
 	for (i = 0; *(str + i) != '\0'; i++)
