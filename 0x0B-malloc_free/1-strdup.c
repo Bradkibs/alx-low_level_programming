@@ -21,7 +21,7 @@ char *_strdup(char *str)
 		free(dup);
 		return (NULL);
 	}
-	else if (str == NULL)
+	else if (!str)
 	{
 		return (NULL);
 	}
