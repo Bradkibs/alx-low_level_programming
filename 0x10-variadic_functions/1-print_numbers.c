@@ -8,7 +8,7 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	if (*separator)
+	if (*separator && n > 0)
 	{
 		unsigned int i;
 
