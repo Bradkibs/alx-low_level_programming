@@ -16,21 +16,18 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	if (fd < 2)
 		return (-1);
-	if (text_content == NULL)
+	if (text_content != NULL)
 	{
-		f_writer = write(STDOUT_FILENO, "", 0);
+	
+		while (*text_content)
+        	{
+                	len++;
+			text_content++;
+		}
+		f_writer = write (STDOUT_FILENO, text_content, len);
 		if (f_writer == -1)
 			return (-1);
-		return (1);
 	}
-	while (*text_content)
-        {
-                len++;
-                text_content++;
-        }
-	f_writer = write (STDOUT_FILENO, text_content, len);
-	if (f_writer == -1)
-		return (-1);
 	close(fd);
 	return (1);
 
