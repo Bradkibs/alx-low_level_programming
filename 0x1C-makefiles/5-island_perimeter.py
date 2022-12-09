@@ -21,6 +21,10 @@ def island_perimeter(grid):
     width = 0
     length = 0
     lst = []
+    if len(grid[0]) > 100:
+        return
+        if len(grid) > 100:
+            return
     for i in range(len(grid)):
         lst.append(grid[i].count(1))
         if lst[i] > 0:
