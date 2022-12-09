@@ -25,6 +25,8 @@ def island_perimeter(grid):
         lst.append(grid[i].count(1))
         if lst[i] > 0:
             length += 1
-
     width = max(lst)
+    for i in lst:
+        if i != width and i > 1:
+            return (length + width) * 2 + 4
     return (length + width) * 2
