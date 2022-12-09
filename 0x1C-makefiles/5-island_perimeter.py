@@ -14,9 +14,6 @@ A function that returns the perimeter of the island described in grid:
 """
 
 
-import math
-
-
 def island_perimeter(grid):
     """
     A technical interview question
