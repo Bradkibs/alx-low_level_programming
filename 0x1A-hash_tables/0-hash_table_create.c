@@ -15,10 +15,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (!new_ht || !node)
 		return (NULL);
-	new_ht->size = size;
 	for (i=0; i < size; i++)
 		node[i] = NULL;
 	new_ht->array = node;
+	new_ht->size = size;
 	free(new_ht);
+	free(node);
 	return (new_ht);
 }
