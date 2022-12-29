@@ -1,5 +1,5 @@
 CC = gcc
-SRC = 0-hash_table_create.c 0-main.c
+SRC = 1-djb2.c 1-main.c
 OBJ = $(SRC:.c=.o)
 NAME = a
 RM = rm -f
