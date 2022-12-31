@@ -1,7 +1,7 @@
 CC = gcc
-SRC = 1-djb2.c 1-main.c
+SRC = 2-key_index.c 2-main.c 1-djb2.c
 OBJ = $(SRC:.c=.o)
-NAME = a
+NAME = c
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
 all: $(OBJ)
