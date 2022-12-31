@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 	tmp = ht->array[index];
-	
+
 	/* checking if the key exists */
 	while (tmp && strcmp(tmp->key, key) != 0)
 		tmp = tmp->next;
@@ -29,7 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		tmp->value = strdup(value);
 		return (1);
 	}
-	
+
 	/* adding a new node if the key doesn't exist */
 	new_node = malloc(sizeof(*new_node));
 	if (!new_node)
