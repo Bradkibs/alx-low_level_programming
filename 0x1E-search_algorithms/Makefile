@@ -1,5 +1,5 @@
 CC = gcc
-SRC = 0-linear.c 0-main.c
+SRC = 1-binary.c 1-main.c
 OBJ = $(SRC:.c=.o)
 NAME = b
 RM = rm -f
