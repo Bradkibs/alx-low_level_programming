@@ -1,44 +1,40 @@
-#include <stdio.h>
-#include <math.h>
+#include "search_algos.h"
 
 /**
- * jump_search - searches a sorted array using jump search algorithm
- * @array: a pointer to a sorted array
- * @size: size of the array to be searched
- * @value: the value to be searched for in a list
- * Return: index of the value at the array or -1 if not found
- *
- */
+  * jump_search - function that searches for a value in a sorted array
+  *               of integers using the Jump search algorithm.
+  * @array: ptr to the first element of the array to search.
+  * @size: no. of elements in the array.
+  * @value: the value to search for.
+  *
+  * Return: the first index where the value is located, or -1 if
+  *	the value is not present or the array is NULL.
+  *
+  * Description: Prints a value every time it is compared in the array.
+  *              Uses the sqrt of the array size as the jump step.
+  */
+
 int jump_search(int *array, size_t size, int value)
 {
-	int start, end, i;
+	size_t i, jump, step;
 
 	if (array == NULL || size == 0)
 		return (-1);
-	start = 0;
-	end = (int)floor(sqrt(size));
 
-	while (array[end] < value && start < end)
+	step = sqrt(size);
+	for (i = jump = 0; jump < size && array[jump] < value;)
 	{
-		printf("Value checked array[%d] = [%d]\n", start, array[start]);
-		printf("Value checked array[%d] = [%d]\n", end, array[end]);
-		if (end < (int)size - 1)
-		{
-			start = end;
-			end += (int)floor(sqrt(size));
-		}
-		else
-		{
-			end = size - 1;
-			break;
-		}
+		printf("Value checked array[%ld] = [%d]\n", jump, array[jump]);
+		i = jump;
+		jump += step;
 	}
-	printf("Value found between indexes [%d] and [%d]\n", start, end);
-	for (i = start; i <= end; i++)
-	{
-		printf("Value checked array[%d] = [%d]\n", i, array[i]);
-		if (array[i] == value)
-			return (i);
-	}
-	return (-1);
+
+	printf("Value found between indexes [%ld] and [%ld]\n", i, jump);
+
+	jump = jump < size - 1 ? jump : size - 1;
+	for (; i < jump && array[i] < value; i++)
+		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+	printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+
+	return (array[i] == value ? (int)i : -1);
 }
